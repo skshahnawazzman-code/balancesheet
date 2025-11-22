@@ -1,0 +1,59 @@
+<?php include "balancesheet.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Balance Sheet and Profit & Loss Account</title>
+
+  <link rel="stylesheet" href="balancesheet.css">
+</head>
+
+<body>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+      <button id="addText">Add Text</button>
+      <button id="saveBtn">Save JSON</button>
+      <button id="saveAsBtn">Print PDF</button>
+
+      <label for="loadJson" class="file-label">Load JSON</label>
+      <input type="file" id="loadJson" accept=".json">
+  </div>
+
+  <!-- A4 PAGE -->
+  <div id="page" class="a4-page">
+      <div id="editLayer" class="edit-layer"></div>
+
+      <!-- Lines -->
+      <div class="vertical-line"></div>
+      <div class="vertical-line1"></div>
+      <div class="vertical-line2"></div>
+      <div class="horizontal-line">
+        <span class="line-text">L i a b i l i t i e s</span>
+        <span class="line-text1 ">A m o u n t</span>
+        <span class="line-text2">A s s e t s</span>
+        <span class="line-text3">A m o u n t</span>
+      </div>
+
+      <div class="horizontal-line1"> </div>
+      <div class="horizontal-line2"></div>
+      <div class="horizontal-line3">
+        <span class="line-text4">T o t a l</span>
+        <span class="line-text5">T o t a l</span>
+      </div>
+      <div class="horizontal-line4"></div>
+  </div>
+
+
+
+  <!-- Excel Style FONT SIZE DROPDOWN (always visible) -->
+  
+
+  <!-- Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="balancesheet.js"></script>
+
+</body>
+</html>
