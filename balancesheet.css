@@ -1,0 +1,229 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0B1E59;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TOOLBAR */
+.toolbar {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 9999;
+  background: #fff;
+  padding: 10px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-label {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #007bff;
+  background-color: white;
+  color: #007bff;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.file-label:hover {
+  background-color: #2C4E86;
+  color: white;
+}
+
+/* A4 PAGE */
+.a4-page {
+  width: 210mm;
+  height: 280mm;
+  background: white;
+  border: 1.5mm solid white;
+  box-sizing: border-box;
+  padding: 0mm;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* EDIT LAYER */
+.edit-layer, #editLayer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* TEXT BOX */
+.text-box {
+  position: absolute;
+  min-width: 100px;
+  padding: 5px;
+  cursor: move;
+  border: 1px dashed transparent;
+  background: rgba(255,255,255,0.8);
+  box-sizing: border-box;
+}
+
+.text-box:hover {
+  border: 2px dashed #666;
+}
+
+.text-box:focus {
+  outline: none;
+  border: 1px solid blue;
+  cursor: text;
+}
+
+/* PRINT */
+@page {
+  size: A4;
+  margin: 10mm;
+}
+
+@media print {
+  .a4-page {
+    width: auto !important;
+    height: auto !important;
+    border: 1.5mm solid black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .text-box {
+    border: 1px solid black !important;
+    background: transparent !important;
+    color: black !important;
+  }
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #007bff;
+  background-color: white;
+  color: #007bff;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover {
+  background-color: #2C4E86;
+  color: white;
+}
+
+/* LINES */
+.vertical-line {
+  width: 2px;
+  height: 1025px;
+  background-color: black;
+  position: absolute;
+  top: 10px;
+  left: 2px;
+}
+
+.vertical-line1 {
+  width: 2px;
+  height: 1026px;
+  background-color: black;
+  position: absolute;
+  top: 10px;
+  left: 763px;
+}
+.vertical-line2 {
+  width: 2px;
+  height: 855px;
+  background-color: black;
+  position: absolute;
+  top: 180px;
+  left: 375px;
+}
+
+.horizontal-line {
+  width: 760px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 180px;
+  left: 3px;
+}
+
+.line-text{
+  position: relative;
+  font-weight: bold;
+  top: 8px;
+  left:10px;
+}
+.line-text1{
+  position: relative;
+  font-weight: bold;
+  top: 8px;
+  left: 152px;
+}
+.line-text2{
+  position: relative;
+  font-weight: bold;
+  top: 8px;
+  left: 175px;
+}
+.line-text3{
+  position: relative;
+  font-weight: bold;
+  top: 8px;
+  left: 375px;
+}
+.horizontal-line1 {
+  width: 760px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 10px;
+  left: 3px;
+
+}
+.horizontal-line2 {
+  width: 760px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 210px;
+  left: 3px;
+}
+.horizontal-line3 {
+  width: 760px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 1000px;
+  left: 3px;
+}
+.line-text4{
+  position: relative;
+  font-weight: bold;
+  top: 10px;
+  left: 9px;
+}
+.line-text5{
+  position: relative;
+  font-weight: bold;
+  top: 10px;
+  left: 320px;
+}
+.horizontal-line4 {
+  width: 760px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 1034px;
+  left: 3px;
+}
+
