@@ -85,27 +85,34 @@
         <p id="error" class="error"></p>
 
         <form onsubmit="login(event)">
-            <input type="password" id="password" placeholder="Enter Password" required>
-            <button type="submit">Login</button>
-        </form>
-    </div>
+    <input type="password" id="password" placeholder="Enter Password" required>
+    <button type="submit">Login</button>
+</form>
 
-    <script>
-        const correctPassword = "1234";  // apna password yahan change kar sakte ho
+<p id="error"></p>
 
-        function login(event){
-            event.preventDefault();
+<!-- MD5 library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script>
 
-            let pass = document.getElementById("password").value;
+<script>
+    // Yahan apna NEW password ka MD5 hash lagao
+    const encryptedPass = "b9972f46c1e52797d66236b118d29709";
 
-            if(pass === correctPassword){
-                localStorage.setItem("auth", "true");
-                window.location = "balancesheet_page.html";
-            } else {
-                document.getElementById("error").innerText = "Wrong Password!";
-            }
+    function login(event){
+        event.preventDefault();
+
+        let pass = document.getElementById("password").value;
+        let hash = md5(pass);
+
+        if(hash === encryptedPass){
+            localStorage.setItem("auth", "true");
+            window.location = "balancesheet_page.html";
+        } else {
+            document.getElementById("error").innerText = "Wrong Password!";
         }
-    </script>
+    }
+</script>
 
 </body>
 </html>
+
