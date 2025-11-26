@@ -63,13 +63,19 @@ input[type="file"] {
 
 /* TEXT BOX */
 .text-box {
-  position: absolute;
+   position: absolute;
   min-width: 100px;
   padding: 5px;
   cursor: move;
   border: 1px dashed transparent;
   background: rgba(255,255,255,0.8);
   box-sizing: border-box;
+  top: 0;
+  left: 0;  
+  background: transparent;
+  border: none;
+  outline: none;
+  pointer-events: auto;
 }
 
 .text-box:hover {
@@ -78,7 +84,7 @@ input[type="file"] {
 
 .text-box:focus {
   outline: none;
-  border: 1px solid blue;
+  border: 2px solid blue;
   cursor: text;
 }
 
@@ -226,4 +232,5 @@ button:hover {
   top: 1034px;
   left: 3px;
 }
+
 
