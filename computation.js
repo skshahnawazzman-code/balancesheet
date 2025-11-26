@@ -4,6 +4,7 @@ const saveBtn = document.getElementById("saveBtn");
 const saveAsBtn = document.getElementById("saveAsBtn");
 const loadJson = document.getElementById("loadJson");
 const page = document.getElementById("page");
+const pageName2 = document.getElementById("computationData");
 
 let selected = null;
 let offset = { x: 0, y: 0 };
@@ -81,11 +82,11 @@ function getPageData() {
 
 function saveToLocal() {
   const data = getPageData();
-  localStorage.setItem("pageData", JSON.stringify(data));
+  localStorage.setItem("pageName2", JSON.stringify(data));
 }
 
 function loadFromLocal() {
-  const savedData = localStorage.getItem("pageData");
+  const savedData = localStorage.getItem("pageName2");
   if (savedData) {
     const items = JSON.parse(savedData);
     editLayer.innerHTML = "";
@@ -172,4 +173,5 @@ document.getElementById("balancesheet").addEventListener("click", function () {
 document.getElementById("profit").addEventListener("click", function () {
 
       window.location.href = "profitandloss.html";
+
     })
