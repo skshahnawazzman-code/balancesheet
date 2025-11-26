@@ -4,6 +4,8 @@ const saveBtn = document.getElementById("saveBtn");
 const saveAsBtn = document.getElementById("saveAsBtn");
 const loadJson = document.getElementById("loadJson");
 const page = document.getElementById("page");
+const pageName = document.getElementById("balancesheetData");
+
 
 let selected = null;
 let offset = { x: 0, y: 0 };
@@ -81,11 +83,11 @@ function getPageData() {
 
 function saveToLocal() {
   const data = getPageData();
-  localStorage.setItem("pageData", JSON.stringify(data));
+  localStorage.setItem("pageName", JSON.stringify(data));
 }
 
 function loadFromLocal() {
-  const savedData = localStorage.getItem("pageData");
+  const savedData = localStorage.getItem("pageName");
   if (savedData) {
     const items = JSON.parse(savedData);
     editLayer.innerHTML = "";
@@ -171,3 +173,4 @@ document.getElementById("computation").addEventListener("click", function () {
 
       window.location.href = "computation.html";
     })
+
