@@ -232,5 +232,15 @@ button:hover {
   top: 1034px;
   left: 3px;
 }
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-40deg); /* tilted watermark */
+  font-size: 150px;  /* adjust size as needed */
+  color: rgba(0, 0, 0, 0.05); /* light/faint watermark */
+  z-index: 0;
+  pointer-events: none; /* content ke upar click block na kare */
+}
 
 
